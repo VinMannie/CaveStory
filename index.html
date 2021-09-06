@@ -69,6 +69,18 @@
     </div>
  <!--   <div class="emscripten_border"> -->
       <canvas class="emscripten" id="canvas" oncontextmenu="event.preventDefault()"></canvas>
+	  <script type='text/javascript'>
+              function goFullScreen(){
+                var canvas = document.getElementById("canvas");
+                if(canvas.requestFullScreen)
+                    canvas.requestFullScreen();
+                else if(canvas.webkitRequestFullScreen)
+                    canvas.webkitRequestFullScreen();
+                else if(canvas.mozRequestFullScreen)
+                    canvas.mozRequestFullScreen();
+              }
+	   </script>
+      <p><button onclick="goFullScreen();">Go Fullscreen</button></p>
 <!--    </div>-->
 
     <hr/>
