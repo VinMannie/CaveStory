@@ -79,8 +79,17 @@
                 else if(canvas.mozRequestFullScreen)
                     canvas.mozRequestFullScreen();
               }
+              function disableFilter(){
+                var canvas = document.getElementById("canvas");
+                if(canvas.requestFullScreen)
+                    canvas.imageSmoothingEnabled = false;
+                else if(canvas.webkitRequestFullScreen)
+                    canvas.webkitImageSmoothingEnabled = false;
+                else if(canvas.mozRequestFullScreen)
+                    canvas.mozImageSmoothingEnabled = false;
+              }
 	   </script>
-      <p style='text-align:center;'><button onclick="goFullScreen();">Go Fullscreen</button></p>
+      <p style='text-align:center;'><button onclick="goFullScreen();">Go Fullscreen</button><button onclick="disableFilter();">Disable Filtering</button></p>
 <!--    </div>-->
 
     <hr/>
