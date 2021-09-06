@@ -80,31 +80,12 @@
                     canvas.mozRequestFullScreen();
               }
 	   </script>
-      <p><button onclick="goFullScreen();">Go Fullscreen</button></p>
+      <p style='text-align:center;'><button onclick="goFullScreen();">Go Fullscreen</button></p>
 <!--    </div>-->
 
     <hr/>
 
- <!--   
-    <div class="emscripten">
-      <input type="checkbox" id="resize">Resize canvas
-      <input type="checkbox" id="pointerLock" checked>Lock/hide mouse pointer
-      <input type="checkbox" id="theater">Theater mode
-      <input type="button" value="Fullscreen" onclick="Module.requestFullscreen(document.getElementById('pointerLock').checked, 
-                                                                                document.getElementById('resize').checked)">
-    </div>
--->
-    <script type='text/javascript'>
-	var softfullscreen = document.getElementById('theater')
-      	if (softfullscreen){
-		EmscriptenFullscreenStrategy strategy;
-		strategy.scaleMode = EMSCRIPTEN_FULLSCREEN_CANVAS_SCALE_STDDEF;
-		strategy.filteringMode = EMSCRIPTEN_FULLSCREEN_FILTERING_DEFAULT;
-		strategy.canvasResizedCallback = emscripten_window_resized_callback;
-		strategy.canvasResizedCallbackUserData = this;   // pointer to user data
-		emscripten_enter_soft_fullscreen("canvas", &strategy);
-	}
-    </script>
+ 
     <div class='content' style='text-align:center;font-family:"Trebuchet MS",Helvetica,sans-serif;'>
 		<strong>Cave Story Emscripten port</strong>
 		<p>
