@@ -10,7 +10,7 @@
       div.emscripten { text-align: center; }
       div.emscripten_border { border: 1px solid black; }
       /* the canvas *must not* have any border or padding, or mouse coords will be wrong */
-      canvas.emscripten { border: 0px none; background-color: black; -webkit-interpolation-mode: nearest-neighbor;}
+      canvas.emscripten { border: 0px none; background-color: black; -ms-interpolation-mode: nearest-neighbor; image-rendering: optimizeSpeed; image-rendering: -webkit-optimize-contrast; image-rendering: -moz-crisp-edges; image-rendering: -o-crisp-edges; image-rendering: crisp-edges; image-rendering: pixelated;}
       .spinner {
         height: 50px;
         width: 50px;
